@@ -1,0 +1,4 @@
+.vite/
+.vercel/
+node_modules/
+*.log
