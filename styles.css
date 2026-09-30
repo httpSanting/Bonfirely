@@ -7,3 +7,21 @@
 .download-short{display:none}
 .ember-halo{inset:0;transform:none}
 @media(max-width:430px){.download-full{display:none}.download-short{display:inline}}
+/* Keep the interactive preview usable instead of shrinking the desktop shell. */
+@media(max-width:720px){
+  .product-stage{margin:0;transform:none;max-width:100%}
+  .app-window{transform:none}
+  .app-shell{grid-template-columns:minmax(0,1fr);height:auto}
+  .app-shell>.rail,.app-shell>.sidebar{display:none}
+  .conversation{min-width:0;min-height:440px}
+  .conversation header{min-height:64px}
+  .conversation header b{font-size:14px}
+  .conversation header small{font-size:12px}
+  .messages{padding:20px 14px;font-size:14px}
+  .messages article>div{min-width:0;overflow-wrap:anywhere}
+  .messages p{font-size:14px}
+  .messages time{font-size:11px}
+  .composer{font-size:14px}
+  #demo-message{font-size:16px!important}
+  .presence-card{position:relative;right:auto;bottom:auto;margin:14px 0 0 auto;width:fit-content;max-width:100%}
+}
