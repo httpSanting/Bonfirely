@@ -1,130 +1,92 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#111216" />
-  <meta name="description" content="Bonfirely é uma sala social para conversar, criar comunidades e fazer chamadas com quem importa." />
-  <meta property="og:title" content="Bonfirely — Sua sala, suas pessoas" />
-  <meta property="og:description" content="Conversas, comunidades e chamadas em uma experiência social acolhedora." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bonfirely.vercel.app/" />
-  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/styles.css" />
-  <title>Bonfirely — Sua sala, suas pessoas</title>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#10151c">
+ <meta name="description" content="Bonfirely Alpha para Windows e Android. Conversas, comunidades e seu celular junto da chamada do PC. Downloads oficiais pelo GitHub.">
+ <meta property="og:title" content="Bonfirely — Perto, em qualquer conversa">
+ <meta property="og:description" content="Conheça as versões Alpha para Windows e Android, o que já funciona e como usar os dois juntos.">
+ <meta property="og:type" content="website"><meta property="og:url" content="https://bonfirely.vercel.app/">
+ <link rel="icon" href="/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css">
+ <title>Bonfirely — Windows e Android Alpha</title>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <header class="site-header" aria-label="Navegação principal">
-    <a class="brand" href="#inicio" aria-label="Bonfirely, início">
-      <span class="brand-mark" aria-hidden="true"><span></span></span>
-      <span>Bonfirely</span>
-    </a>
-    <nav aria-label="Seções">
-      <a href="#recursos">Recursos</a>
-      <a href="#servico">Serviço</a>
-      <a href="#baixar">Baixar</a>
-    </nav>
-    <a class="header-download" data-download="installer" href="https://github.com/httpSanting/Bonfirely/releases/download/v0.9.36/Bonfirely-Setup-0.9.36.exe" aria-label="Baixar Bonfirely para Windows"><span class="download-full">Baixar para Windows</span><span class="download-short" aria-hidden="true">Baixar</span></a>
-  </header>
-
-  <main id="conteudo">
-    <section class="hero" id="inicio">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span> Um lugar para estar junto</p>
-        <h1>Uma conversa que<br /><em>parece sua.</em></h1>
-        <p class="hero-lead">Reúna mensagens, comunidades e chamadas em um lugar acolhedor, fácil de usar e feito para compartilhar.</p>
-        <div class="hero-actions" id="baixar">
-          <a class="button primary" data-download="installer" href="https://github.com/httpSanting/Bonfirely/releases/download/v0.9.36/Bonfirely-Setup-0.9.36.exe">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
-            Baixar para Windows
-          </a>
-          <a class="button secondary" href="#demo-chat">Experimentar a prévia</a>
-        </div>
-        <p class="release-note"><span id="release-version">Versão 0.9.36</span> · Windows 10/11 · Instalador online · Requer internet</p>
-      </div>
-
-      <div class="product-stage" aria-label="Prévia da interface do Bonfirely">
-        <div class="ember-halo" aria-hidden="true"></div>
-        <div class="app-window">
-          <div class="titlebar"><span class="mini-mark"></span><b>Bonfirely</b><span class="window-controls">— □ ×</span></div>
-          <div class="app-shell">
-            <aside class="rail" aria-hidden="true">
-              <span class="rail-home">●</span><span class="server active">B</span><span class="server">C</span><span class="server">M</span><span class="server add">+</span>
-            </aside>
-            <aside class="sidebar">
-              <div class="server-heading"><span>Cafeteria</span><b>⌄</b></div>
-              <small>CANAIS DE TEXTO</small>
-              <div class="channel active"><span>#</span> conversar</div>
-              <div class="channel"><span>#</span> música</div>
-              <small>CANAIS DE VOZ</small>
-              <div class="voice"><span>◉</span><div><b>Cafézinho</b><small>3 conectados</small></div></div>
-              <div class="voice-user"><span class="avatar ava-clara">C</span> Clara</div>
-              <div class="voice-user"><span class="avatar ava-mina">M</span> Mina</div>
-              <div class="account"><span class="avatar ava-you">V</span><div><b>Você</b><small>Online</small></div><span>⚙</span></div>
-            </aside>
-            <section class="conversation">
-              <header><div><b># conversar</b><small>Um lugar para ficar perto.</small></div><span class="header-icons">⌕ ♫ ◉</span></header>
-              <div class="messages" id="demo-chat" aria-label="Prévia local de conversa" style="max-height:320px;overflow:auto">
-                <article><span class="avatar ava-clara">C</span><div><p><b>Clara</b><time> hoje às 20:14</time></p><p>Entrei na sala. Vamos conversar?</p></div></article>
-                <article><span class="avatar ava-mina">M</span><div><p><b>Mina</b><time> hoje às 20:15</time></p><p>Já estou aqui ✦</p><div class="call-card"><span class="call-icon">◉</span><div><b>Cafézinho</b><small>Clara, Mina e você</small></div><button>Entrar</button></div></div></article>
-                <article><span class="avatar ava-you">V</span><div><p><b>Você</b><time> agora</time></p><p>Acendi a fogueira.</p></div></article>
-              </div>
-              <form class="composer" id="demo-form"><input id="demo-message" aria-label="Mensagem na prévia local" maxlength="500" placeholder="Experimente escrever aqui…" autocomplete="off" style="min-width:0;flex:1;width:100%;border:0;background:transparent;color:inherit;font:inherit;padding:8px"><button type="submit" aria-label="Enviar mensagem na prévia">➤</button></form>
-              <small style="display:block;padding:8px 16px">Prévia local: nada é enviado ou salvo. Recarregar limpa suas mensagens.</small>
-            </section>
-          </div>
-        </div>
-        <div class="presence-card"><span class="presence-avatar">C</span><div><small>AGORA NA SALA</small><b>Clara está falando</b></div><span class="levels" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
-      </div>
-    </section>
-
-    <section class="service-strip" id="servico" aria-labelledby="service-title">
-      <div><p class="section-kicker">SERVIÇO BONFIRELY</p><h2 id="service-title">Seu ponto de encontro, com estado visível.</h2></div>
-      <div class="service-status" role="status" aria-live="polite">
-        <span class="status-light checking" id="status-light"></span>
-        <div><b id="status-label">Verificando a conexão…</b><small id="status-detail">Só um instante</small></div>
-      </div>
-      <button class="icon-button" id="refresh-status" type="button" aria-label="Verificar a conexão novamente" title="Verificar novamente">
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7" /></svg>
-      </button>
-    </section>
-
-    <section class="features" id="recursos" aria-labelledby="features-title">
-      <div class="section-heading">
-        <p class="section-kicker">FEITO PARA ESTAR JUNTO</p>
-        <h2 id="features-title">Tudo no mesmo ritmo.</h2>
-        <p>Do “oi” à chamada, sem perder o contexto no caminho.</p>
-      </div>
-      <div class="feature-grid">
-        <article class="feature feature-chat">
-          <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3 1.5-5A7 7 0 0 1 3 13V8a5 5 0 0 1 5-5h9a4 4 0 0 1 4 4z" /></svg></div>
-          <h3>Conversas que fluem</h3><p>DMs, comunidades, anexos, reações e contexto para continuar de onde você parou.</p>
-          <div class="mini-thread" aria-hidden="true"><span></span><div><b>Chegou bem?</b><i></i></div><small>20:42</small></div>
-        </article>
-        <article class="feature feature-call">
-          <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0Zm-5 8c1.5-3 4.5-5 9-5s7.5 2 9 5" /></svg></div>
-          <h3>Chamada presente</h3><p>Áudio, câmera e tela permanecem acessíveis enquanto você navega por outras conversas.</p>
-          <div class="mini-call" aria-hidden="true"><span class="avatar ava-clara">C</span><span class="avatar ava-mina">M</span><span class="avatar ava-you">V</span><i></i></div>
-        </article>
-        <article class="feature feature-selfhost">
-          <div class="feature-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16v5H4zm0 7h16v5H4zM7 8.5h.01M7 15.5h.01" /></svg></div>
-          <h3>Converse do seu jeito</h3><p>Personalize seu perfil, encontre suas comunidades e continue suas conversas no aplicativo.</p>
-          <div class="server-lines" aria-hidden="true"><i></i><i></i><i></i></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="download-panel" aria-labelledby="download-title">
-      <div><p class="section-kicker">PRONTO PARA ACENDER</p><h2 id="download-title">Instale. Entre. Chame quem importa.</h2><p>Abra o instalador online. Ele baixa o aplicativo e prepara tudo para você entrar e encontrar seus amigos.</p></div>
-      <div class="download-actions">
-        <a class="button primary" data-download="installer" href="https://github.com/httpSanting/Bonfirely/releases/download/v0.9.36/Bonfirely-Setup-0.9.36.exe">Baixar instalador online</a>
-        <a class="text-link" data-download="checksums" href="https://github.com/httpSanting/Bonfirely/releases/download/v0.9.36/Bonfirely-0.9.36-SHA256SUMS.txt">Informações do download <span>↗</span></a>
-      </div>
-    </section>
-  </main>
-
-  <footer><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><span></span></span><span>Bonfirely</span></a><p>Uma sala social feita para as suas pessoas.</p><p>© <span id="year"></span> Bonfirely</p></footer>
-  <script src="/app.js" defer></script>
-</body>
-</html>
+ <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+ <header class="site-header">
+  <a class="brand" href="#inicio" aria-label="Bonfirely, início"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2c1 5 5 6 5 11a6 6 0 0 1-12 0c0-3 2-5 4-7 0 3 1 4 2 4 2-2 2-5 1-8Z"/></svg>Bonfirely</a>
+  <nav aria-label="Seções"><a href="#juntos">PC + celular</a><a href="#disponibilidade">Recursos</a><a href="#baixar">Baixar</a></nav>
+  <a class="header-download" href="#baixar">Escolher versão</a>
+ </header>
+ <main id="conteudo">
+  <section class="hero" id="inicio">
+   <div class="hero-copy">
+    <h1>Sua turma.<br><em>Mais perto.</em></h1>
+    <p class="hero-lead">Do computador ao celular, um lugar para conversar, encontrar suas comunidades e compartilhar o momento.</p>
+    <div class="hero-actions">
+     <a class="button primary" data-download="installer" href="https://github.com/httpSanting/Bonfirely/releases/download/v0.9.37/Bonfirely-Setup-0.9.37.exe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v12H3zM8 21h8m-4-5v5"/></svg>Windows Alpha</a>
+     <a class="button secondary" data-download="android" href="https://github.com/httpSanting/Bonfirely/releases/download/android-v0.2.0-alpha/Bonfirely-Mobile-0.2.0-alpha.apk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10v20H7zM11 18h2"/></svg>Android Alpha · APK</a>
+    </div>
+    <p class="release-note"><span id="release-version">Windows 0.9.37</span> · <span id="android-version">Android 0.2.0-alpha</span></p>
+    <div class="alpha-notice"><b>Os dois estão em Alpha.</b><p>Já dá para começar, mas ainda estamos construindo. O Android está ganhando as funções do computador aos poucos. <a href="#disponibilidade">Veja o que já está disponível.</a></p></div>
+   </div>
+   <div class="product-stage">
+    <div class="preview-heading"><h2>Experimente uma conversa</h2><span>Prévia local</span></div>
+    <div class="app-window">
+     <div class="titlebar"><b>Bonfirely</b><span class="alpha-tag">Alpha</span><span>Conversa demonstrativa</span></div>
+     <div class="app-shell">
+      <aside class="rail" aria-hidden="true"><span class="rail-home">B</span><span class="server active">CA</span><span class="server">RP</span></aside>
+      <aside class="sidebar"><div class="server-heading">Cafeteria</div><small>CANAIS DE TEXTO</small><div class="channel active"># conversar</div><div class="channel"># mesa-principal</div><small>CANAIS DE VOZ</small><div class="voice">Cafézinho</div><div class="voice-user"><span class="avatar ava-clara">C</span>Clara</div><div class="voice-user"><span class="avatar ava-mina">M</span>Mina</div><div class="account"><span class="avatar ava-you">V</span><div><b>Você</b><small>Na demonstração</small></div></div></aside>
+      <section class="conversation" aria-label="Conversa demonstrativa">
+       <header><b># conversar</b><small>Para testar sem criar uma conta.</small></header>
+       <div class="messages" id="demo-chat" role="log" aria-label="Prévia local de conversa" aria-live="polite">
+        <article><span class="avatar ava-clara">C</span><div><p><b>Clara</b><time>20:14</time></p><p>Entrei na sala. Vamos conversar?</p></div></article>
+        <article><span class="avatar ava-mina">M</span><div><p><b>Mina</b><time>20:15</time></p><p>Já estou aqui. Você vem?</p><div class="call-card"><div><b>Cafézinho</b><small id="demo-call-state">Chamada simulada</small></div><button type="button" id="demo-call" aria-pressed="false">Entrar</button></div></div></article>
+       </div>
+       <form class="composer" id="demo-form"><label class="sr-only" for="demo-message">Mensagem na prévia local</label><input id="demo-message" maxlength="500" placeholder="Escreva um oi…" autocomplete="off"><button type="submit" aria-label="Enviar mensagem na prévia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 3 18 9-18 9 4-9-4-9Zm4 9h14"/></svg></button></form>
+      </section>
+     </div>
+    </div>
+    <p class="preview-note">Só acontece nesta página. Nada é enviado ou salvo; recarregar limpa a conversa. A chamada é uma simulação, sem câmera ou microfone.</p>
+   </div>
+  </section>
+  <section class="together" id="juntos" aria-labelledby="together-title">
+   <div><h2 id="together-title">Um espaço.<br>Duas formas de estar junto.</h2><p>Entre com a mesma conta para encontrar suas conversas e comunidades no PC e no Android. Sem criar outro perfil para o celular.</p></div>
+   <div class="together-steps">
+    <article><h3>Continue a conversa</h3><p>A Alpha Android já permite ler e enviar texto em mensagens diretas e canais. As mensagens ficam na mesma conversa que você abre no computador.</p></article>
+    <article><h3>Leve seu celular para a chamada</h3><p>No computador, entre na chamada e abra <b>Celular</b>. No Android, escolha <b>Celular + PC</b>, cole o convite e autorize câmera, microfone ou ambos.</p><p class="detail">Nesta Alpha, os aparelhos precisam estar na mesma rede. Você copia a resposta de volta ao PC. Esse modo não exige root nem depuração.</p></article>
+    <article><h3>Você decide quando conectar</h3><p>Entrar na conta não liga a câmera. A conexão com o PC é uma escolha separada, com permissões explícitas e opção de encerrar.</p></article>
+   </div>
+  </section>
+  <section class="availability" id="disponibilidade" aria-labelledby="availability-title">
+   <h2 id="availability-title">O que já está em cada Alpha</h2>
+   <p>O destino é uma experiência completa nos dois. Hoje, as versões ainda têm alcances diferentes.</p>
+   <p class="detail">Em uma tela pequena, deslize a comparação para ver as duas versões.</p>
+   <div class="table-wrap" tabindex="0" role="region" aria-label="Comparação das versões">
+    <table><caption class="sr-only">Disponibilidade nesta atualização</caption><thead><tr><th scope="col">Para fazer</th><th scope="col">Windows</th><th scope="col">Android</th></tr></thead><tbody>
+     <tr><th scope="row">Entrar com sua conta</th><td>Disponível</td><td>Disponível</td></tr>
+     <tr><th scope="row">Conversas e canais de texto</th><td>Disponível</td><td>Disponível</td></tr>
+     <tr><th scope="row">Ver comunidades e seu perfil</th><td>Disponível</td><td>Disponível</td></tr>
+     <tr><th scope="row">Usar o celular como câmera ou microfone do PC</th><td>Recebe o celular</td><td>Conecta por convite</td></tr>
+     <tr><th scope="row">Chamadas, vídeo e transmissão próprios</th><td>Disponível</td><td>Em desenvolvimento</td></tr>
+     <tr><th scope="row">Mídias, Reservada e ferramentas avançadas</th><td>Disponível</td><td>Em desenvolvimento</td></tr>
+     <tr><th scope="row">Bonfire (RPG)</th><td>Janela própria</td><td>Em desenvolvimento</td></tr>
+    </tbody></table>
+   </div>
+   <p class="detail">Alpha não significa que tudo foi testado em todos os aparelhos. Se algo falhar, mantenha seu rascunho e tente novamente. Novas funções e correções chegam nas atualizações.</p>
+  </section>
+  <section class="downloads" id="baixar" aria-labelledby="download-title">
+   <h2 id="download-title">Escolha onde acender a conversa.</h2>
+   <p>Downloads oficiais no GitHub. Windows e Android são atualizados separadamente para você receber o arquivo certo.</p>
+   <article class="platform-download"><div><h3>Bonfirely para Windows <span class="alpha-tag">Alpha</span></h3><p>Windows 10/11 · Instalador online · Internet necessária</p><p class="detail">O instalador baixa e prepara o programa. Você também pode usá-lo se a versão instalada não abrir. Ainda não possui assinatura comercial Windows.</p></div><div class="download-actions"><a class="button primary" data-download="installer" href="https://github.com/httpSanting/Bonfirely/releases/download/v0.9.37/Bonfirely-Setup-0.9.37.exe">Baixar Windows Alpha</a><a class="text-link" data-download="checksums" href="https://github.com/httpSanting/Bonfirely/releases/download/v0.9.37/Bonfirely-0.9.37-SHA256SUMS.txt">Informações do download</a></div></article>
+   <article class="platform-download"><div><h3>Bonfirely para Android <span class="alpha-tag">Alpha</span></h3><p>Android 8 ou mais recente · APK assinado · Instalação pelo Android</p><p class="detail">Baixe e abra o APK. Se o Android pedir, permita a instalação por esse navegador apenas para instalar. Câmera e microfone continuam dependendo da sua autorização.</p></div><div class="download-actions"><a class="button primary" data-download="android" href="https://github.com/httpSanting/Bonfirely/releases/download/android-v0.2.0-alpha/Bonfirely-Mobile-0.2.0-alpha.apk">Baixar Android Alpha</a><a class="text-link" data-download="android-notes" href="https://github.com/httpSanting/Bonfirely/releases/tag/android-v0.2.0-alpha">Funções e notas da Alpha</a><a class="text-link" data-download="android-checksums" href="https://github.com/httpSanting/Bonfirely/releases/download/android-v0.2.0-alpha/Bonfirely-Mobile-0.2.0-alpha-SHA256SUMS.txt">Informações do APK</a></div></article>
+   <p class="detail">Instalou a antiga prévia Android 0.1.0? Ela usava uma assinatura de teste. Preserve o que precisar e remova apenas essa prévia antes de instalar a nova Alpha. Futuras Alphas usarão a nova identidade de assinatura.</p>
+  </section>
+  <section class="service-strip" id="servico" aria-labelledby="service-title">
+   <div><h2 id="service-title">Como está a conexão?</h2><p class="detail">O estado da conversa não interfere no acesso aos downloads.</p></div>
+   <div class="service-status" role="status" aria-live="polite"><span class="status-light checking" id="status-light"></span><div><b id="status-label">Verificando a conexão…</b><small id="status-detail">Só um instante</small></div></div>
+   <button class="icon-button" id="refresh-status" type="button" aria-label="Verificar a conexão novamente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg></button>
+  </section>
+ </main>
+ <footer><a class="brand" href="#inicio">Bonfirely</a><p>Uma sala social feita para as suas pessoas.</p><p>© <span id="year"></span> Bonfirely · Windows e Android Alpha</p></footer>
+ <script src="/app.js" defer></script>
+</body></html>
