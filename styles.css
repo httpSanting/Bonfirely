@@ -5,4 +5,5 @@
 @media(max-width:430px){.product-stage{margin-bottom:-70px;transform:scale(.63)}.hero-actions{flex-direction:column}.button{width:100%}.release-note{line-height:1.6}.service-status small{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.app-window{transform:none}}
 .download-short{display:none}
+.ember-halo{inset:0;transform:none}
 @media(max-width:430px){.download-full{display:none}.download-short{display:inline}}
