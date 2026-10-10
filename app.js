@@ -15,20 +15,23 @@ function updateDownloads(windows,android){
  }
  document.querySelectorAll("[data-download]").forEach(link=>{const url=urls[link.dataset.download];if(url)link.href=url;});
 }
+let checking = false;
 async function refreshStatus(){
+ if(checking)return; checking=true;
  nodes.light.className="status-light checking";nodes.label.textContent="Verificando a conexão…";nodes.detail.textContent="Só um instante";nodes.refresh.disabled=true;
  try{
-  const response=await fetch("/api/status",{cache:"no-store",signal:AbortSignal.timeout(6000)});
+  const response=await fetch("/api/status",{signal:AbortSignal.timeout(7500)});
   if(!response.ok)throw Error("Unavailable");
   const status=await response.json();
   nodes.light.className=status.online?"status-light online":"status-light offline";
   nodes.label.textContent=status.online?"Conexão disponível":"Conexão indisponível no momento";
-  nodes.detail.textContent="Windows e Android continuam disponíveis para baixar.";
+  const checked=Date.parse(status.checkedAt);
+  nodes.detail.textContent=Number.isFinite(checked)?"Verificação às "+new Date(checked).toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+" · downloads disponíveis.":"Windows e Android continuam disponíveis para baixar.";
   updateDownloads(status.version,status.androidVersion);
  }catch{
   nodes.light.className="status-light offline";nodes.label.textContent="Não foi possível confirmar a conexão";
   nodes.detail.textContent="Os downloads oficiais continuam disponíveis. Tente verificar novamente.";
- }finally{nodes.refresh.disabled=false;}
+ }finally{checking=false;nodes.refresh.disabled=false;}
 }
 nodes.refresh.addEventListener("click",refreshStatus);
 document.querySelector("#year").textContent=new Date().getFullYear();
