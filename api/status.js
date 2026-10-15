@@ -2,7 +2,7 @@
 const SERVER = "https://bonfire-server.tail023236.ts.net";
 const RELEASES = "https://api.github.com/repos/httpSanting/Bonfirely/releases?per_page=40";
 // Update only after the public installers and manifests have been verified.
-const VERIFIED_WINDOWS = "0.9.45", VERIFIED_ANDROID = "0.4.0-alpha";
+const VERIFIED_WINDOWS = "0.9.46", VERIFIED_ANDROID = "0.4.0-alpha";
 let snapshot, expiresAt = 0, pending;
 function greater(a, b) {
   const left = a.replace(/-alpha\.?/, ".").split(".").map(Number);
